@@ -17,9 +17,7 @@ data class Magazine(
      val priceRecommended: String,
      val periodicity: Boolean,
 
-//     @OneToMany(mappedBy = "magazine")
-//     val articles: List<Magazine> = emptyList()
- ) : Comparable<Magazine> {
+) : Comparable<Magazine> {
      override fun compareTo(other: Magazine): Int {
          val nameComparison = name.compareTo(other.name)
          return if (nameComparison != 0) nameComparison else id.compareTo(other.id)
